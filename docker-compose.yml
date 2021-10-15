@@ -1,0 +1,31 @@
+version: '3'
+services:
+  maria:
+    image: mariadb:10.6.3
+    ports:
+      - 13306:3306
+    volumes:
+      - ./maria/conf.d:/etc/mysql/conf.d
+      - ./maria/data:/var/lib/mysql
+      - ./maria/initdb.d:/docker-entrypoint-initdb.d
+    env_file: .env
+    environment:
+      TZ: Asia/Seoul
+    networks:
+      - todoNetwork
+    restart: always
+  node:
+    build: ./nodejs
+    ports:
+      - '14001:4001'
+    networks:
+      - todoNetwork
+  next:
+    build: ./nextjs
+    ports:
+      - '15001:5001'
+    networks:
+      - todoNetwork
+
+networks:
+  todoNetwork:

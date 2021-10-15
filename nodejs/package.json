@@ -1,0 +1,45 @@
+{
+  "name": "lt-node",
+  "version": "1.0.0",
+  "description": "node study",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githong-kr/lt-node-sutdy.git"
+  },
+  "author": "bale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/githong-kr/lt-node-sutdy/issues"
+  },
+  "homepage": "https://github.com/githong-kr/lt-node-sutdy#readme",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mariadb": "^2.5.4",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/register": "^7.14.5",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2016": "^6.24.1",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8"
+  }
+}
